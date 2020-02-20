@@ -1,6 +1,6 @@
 <template>
   <div>
-
+      <header-back :headerTitle="headerTitle" :headerUrl='headerUrl'></header-back>
       <div class="customer-msg-wrap">
           <div v-for="item in detailLists">
             <span class="customer-msg-title">{{item.title}}</span>
@@ -11,19 +11,24 @@
 </template>
 
 <script>
+
 import Vue from 'vue'
+
 import { Field } from 'mint-ui';
 import { Button } from 'mint-ui';
+import HeaderBack from './headerBack'
 
 Vue.component(Button.name, Button);
 Vue.component(Field.name, Field);
 
 export default {
   components:{
-
+     HeaderBack
   },
   data () {
     return {
+      headerTitle:'客户信息',
+      headerUrl:'/',
       business:'',
       detailLists:[
         {

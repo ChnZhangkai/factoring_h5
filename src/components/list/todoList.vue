@@ -1,28 +1,34 @@
 <template>
-  <div class="detail-list-wrap">
-  <router-link
-           :to="{path:'../detail/'+ toKey}">
-      <div class="detail-list">
-          <div v-for="item in detailLists">
-            <span>{{item.title}}：</span>
-            <span>{{item.value}}</span>
+  <div class="">
+    <header-back :headerTitle="headerTitle" :headerUrl='headerUrl'></header-back>
+    <div class="detail-list-wrap">
+       <router-link :to="{path:'../detail/'+ toKey}">
+          <div class="detail-list">
+              <div v-for="item in detailLists">
+                <span>{{item.title}}：</span>
+                <span>{{item.value}}</span>
+              </div>
           </div>
-      </div>
-      <div class="detail-msg">
-        没有更多了...
-      </div>
-   </router-link>
+          <div class="detail-msg">
+            没有更多了...
+          </div>
+       </router-link>
+    </div>
+
   </div>
 </template>
 
 <script>
+import HeaderBack from '../headerBack'
 
 export default {
   components:{
-
+    HeaderBack
   },
   data () {
     return {
+      headerTitle:'待办任务列表',
+      headerUrl:'/',
       toKey:'todoDetail',
       detailLists:[
         {

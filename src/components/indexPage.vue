@@ -48,6 +48,7 @@ export default {
             toKey:'todoList',
             pic:require('../assets/task_1.png'),
             number:1,
+            headerUrlTitle:'待办任务查询',
             saleout:true
 
           },
@@ -58,6 +59,7 @@ export default {
             toKey:'processList',
             pic:require('../assets/task_2.png'),
             number:1,
+            headerUrlTitle:'已办任务查询',
             saleout:false
           },
           {
@@ -67,6 +69,7 @@ export default {
             toKey:'finishList',
             pic:require('../assets/task_3.png'),
             number:1,
+            headerUrlTitle:'已完成任务查询',
             saleout:false
           },
           {
@@ -76,9 +79,11 @@ export default {
             toKey:'messageList',
             pic:require('../assets/msgs.png'),
             number:1,
+            headerUrlTitle:'消息查询',
             saleout:false
           }
         ],
+        localDate:""
     }
   },
   methods:{

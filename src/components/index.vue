@@ -2,11 +2,13 @@
   <div>
       <mt-tabbar  v-model="selected">
         <mt-tab-item id="index">
-          <img slot="icon" src="../assets/weibiaoti1.png">
+          <img slot="icon" v-show="!selectIndexFlag" src="../assets/index.png">
+          <img slot="icon" v-show="selectIndexFlag" src="../assets/index_ph.png">
           首页
         </mt-tab-item>
         <mt-tab-item id="mine">
-          <img slot="icon" src="../assets/wodedangxuan1.png">
+          <img slot="icon" v-show="selectIndexFlag" src="../assets/mine.png">
+          <img slot="icon" v-show="!selectIndexFlag" src="../assets/mine_ph.png">
           我的
         </mt-tab-item>
       </mt-tabbar>
@@ -38,13 +40,15 @@ export default {
   },
   data () {
     return {
-        selected:"index"
+        selected:"index",
+        selectIndexFlag:true
     }
   },
   watch: {
         selected: function (val, oldVal) {
             // 这里就可以通过 val 的值变更来确定
             console.log(val)
+            this.selectIndexFlag = !this.selectIndexFlag
         }
     },
   methods:{

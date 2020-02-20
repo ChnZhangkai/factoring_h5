@@ -6,18 +6,7 @@
 
 <script>
 export default {
-  name: 'App',
-  created(){
-
-    if(navigator.userAgent.toLowerCase().indexOf('miniprogram') > -1){
-      // alert('微信小程序')
-    }
-
-    if(navigator.userAgent.toLowerCase().indexOf('dingtalk') > -1){
-      // alert('钉钉小程序')
-    }
-
-  }
+  name: 'App'
 }
 </script>
 
@@ -44,8 +33,19 @@ body{
     height: 200px;
 }
 .mint-swipe img{
-  width: 100%;
-  height: 100%;
-  display: inline-block;
+   width: 100%;
+   height: 100%;
+   display: inline-block;
 }
+.mint-header{
+  background-color: #fec901;
+  color: #101010;
+}
+.mint-header-title{
+   font-size: 16px
+}
+.mint-tabbar > .mint-tab-item.is-selected{
+   color: #fec901;
+}
+
 </style>
