@@ -12,6 +12,7 @@ export default {
 
 <style>
 /*全局*/
+/* 修改哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或 */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td,article,textarea{margin:0;padding:0;}
 body{font-size:12px;color:#666;font-family: 'Microsoft yahei',Arial; min-width:320px}
 table{border-collapse:collapse;border-spacing:0;}
