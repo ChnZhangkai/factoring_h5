@@ -6,7 +6,18 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  created(){
+
+    if(navigator.userAgent.toLowerCase().indexOf('miniprogram') > -1){
+      // alert('微信小程序')
+    }
+
+    if(navigator.userAgent.toLowerCase().indexOf('dingtalk') > -1){
+      // alert('钉钉小程序')
+    }
+
+  }
 }
 </script>
 
